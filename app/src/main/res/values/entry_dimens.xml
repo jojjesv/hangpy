@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="entry_name_size">24sp</dimen>
+    <!-- Height of frontpage entry list item-->
+    <dimen name="entry_height">128dp</dimen>
+</resources>
