@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Hangpy</string>
+    <string name="event_name_hint">Enter an event name</string>
 </resources>
