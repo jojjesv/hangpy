@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Hangpy.iml" filepath="$PROJECT_DIR$/Hangpy.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hangpy.iml" filepath="$PROJECT_DIR$/hangpy.iml" />
     </modules>
   </component>
 </project>
