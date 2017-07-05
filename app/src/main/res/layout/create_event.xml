@@ -1,19 +1,212 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll_root"
+    android:background="@color/primary"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
-    <fragment
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        class="com.google.android.gms.maps.MapFragment" />
-
-    <EditText
-        android:hint="@string/event_name_hint"
-        android:id="@+id/event_name_input"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/primary_lighter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/create_event_header"
+            android:textAlignment="center" />
+
+        <TextView
+            style="@style/CreateEventHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/create_event_location_heading" />
+
+        <!-- Location header -->
+        <fragment
+            android:id="@+id/map"
+            class="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="320dp" />
+
+        <!-- Map -->
+
+        <!-- Category header -->
+        <TextView
+            style="@style/CreateEventHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/create_event_category_header" />
 
 
+        <!-- Category chooser -->
+        <LinearLayout
+            style="@style/RoundButton"
+            android:layout_width="250dp"
+            android:onClick="showCategoryInput">
 
-</LinearLayout>
+            <ImageView
+                style="@style/RoundButtonIcon"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/current_category"
+                style="@style/RoundButtonText"
+                android:text="@string/category_select" />
+
+        </LinearLayout>
+
+
+        <!-- Time header -->
+        <TextView
+            style="@style/CreateEventHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/create_event_time_heading" />
+
+
+        <!-- Button: Start of event -->
+        <LinearLayout
+            style="@style/RoundButton"
+            android:onClick="showStartTimeDialog"
+            android:layout_width="250dp">
+
+            <ImageView
+                style="@style/RoundButtonIcon"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/start_text"
+                style="@style/RoundButtonText"
+                android:text="Starts " />
+
+        </LinearLayout>
+
+
+        <!-- Button: End of event-->
+        <LinearLayout
+            style="@style/RoundButton"
+            android:onClick="showEndTimeDialog"
+            android:layout_width="250dp"
+            android:layout_marginTop="12dp">
+
+            <ImageView
+                style="@style/RoundButtonIcon"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/end_text"
+                style="@style/RoundButtonText"
+                android:text="Ends " />
+
+        </LinearLayout>
+
+
+        <!-- Event duration -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="Event will last 7 hours" />
+
+
+        <!-- User-specified event name -->
+        <TextView
+            style="@style/CreateEventHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/create_event_description_header" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <!--
+            Optional description toggle.
+        -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/side_button_pressed"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_close_light" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/create_event_add_description" />
+
+        </LinearLayout>
+
+
+        <!-- Image/Video input -->
+        <TextView
+            style="@style/CreateEventHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/create_event_photos_heading" />
+
+        <!--
+            Image/Video gallery
+        -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
+            <LinearLayout
+                android:id="@+id/gallery"
+                android:layout_width="wrap_content"
+                android:layout_height="320dp">
+
+                <!-- For adding a gallery -->
+                <LinearLayout
+                    android:background="@drawable/add_to_gallery_bg_released"
+                    android:layout_width="320dp"
+                    android:layout_height="320dp">
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <CheckedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test" />
+
+
+        <!-- Ensures the user is somewhat aware of what they entered -->
+        <TextView
+            style="@style/CreateEventHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/create_event_pre_heading" />
+
+
+        <!-- Submit event -->
+        <LinearLayout
+            style="@style/RoundButton"
+            android:layout_width="250dp">
+
+            <TextView
+                style="@style/RoundButtonText"
+                android:text="@string/create_event" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
