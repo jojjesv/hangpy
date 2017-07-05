@@ -30,6 +30,7 @@
         <LinearLayout
             android:id="@+id/map_container"
             android:layout_height="320dp"
+            android:elevation="16dp"
             android:layout_width="match_parent">
             <fragment
                 android:id="@+id/map"

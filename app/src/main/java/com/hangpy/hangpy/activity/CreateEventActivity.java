@@ -245,6 +245,10 @@ public class CreateEventActivity extends FragmentActivity implements OnMapReadyC
     @Override
     public void onMapReady(final GoogleMap googleMap) {
         map = googleMap;
+
+        //  Initial zoom
+        map.setMinZoomPreference(2);
+
         requestCurrentLocation();
         googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
             Marker mainMarker;
@@ -430,13 +434,11 @@ public class CreateEventActivity extends FragmentActivity implements OnMapReadyC
         } else {
             //  Is granted
             LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
-            locationManager.requestSingleUpdate(LocationManager.NETWORK_PROVIDER, new LocationAdapter() {
-                @Override
-                public void onLocationChanged(Location location) {
-                    map.moveCamera(CameraUpdateFactory.newLatLngZoom(
-                            new LatLng(location.getLatitude(), location.getLongitude()), 16));
-                }
-            }, Looper.getMainLooper());
+
+            Location lastLocation = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+
+            map.animateCamera(CameraUpdateFactory.newLatLngZoom(
+                    new LatLng(lastLocation.getLatitude(), lastLocation.getLongitude()), 12));
         }
     }
 
