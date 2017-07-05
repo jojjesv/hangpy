@@ -22,4 +22,7 @@
         <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyACRz8QeHiBZYiE2VRcd0HX_TRcwQelCM0" />
     </application>
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-feature android:name="android.hardware.camera2" android:required="false" />
 </manifest>

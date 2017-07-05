@@ -7,5 +7,6 @@
     <color name="primary_darker">#3C9595</color>
     <color name="primary_light">#C5F1F1</color>
     <color name="primary_lighter">#F2FEFE</color>
+    <color name="map_marker">@color/primary</color>
     <color name="white">#FAFAFA</color>
 </resources>

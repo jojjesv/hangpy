@@ -14,6 +14,19 @@
     <string name="events_header">Events</string>
     <string name="input_category_heading">Choose Activity</string>
     <string name="suggestion_heading">Did you mean</string>
-    <string name="event_start">Starts %s</string>
-    <string name="event_end">Ends %s</string>
+    <string name="event_start" formatted="true">Starts %s</string>
+    <string name="event_end" formatted="true">Ends %s</string>
+    <string name="event_duration" formatted="true">Event will last %1$d %2$s</string>
+    <string name="event_duration_approx" formatted="true">Event will last around %1$d %2$s</string>
+    <string name="event_duration_minutes" formatted="true">Event will last %1$d %2$s %3$d %4$s</string> <!-- With minutes -->
+    <string name="event_duration_minutes_approx" formatted="true">Event will last around %1$d %2$s %3$d %4$s</string>
+    <string name="quantity_one_hour">an</string>
+    <plurals name="hours">
+        <item quantity="one">hour</item>
+        <item quantity="other">hours</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="one">min</item>
+        <item quantity="other">mins</item>
+    </plurals>
 </resources>

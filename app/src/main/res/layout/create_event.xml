@@ -20,18 +20,23 @@
             android:text="@string/create_event_header"
             android:textAlignment="center" />
 
+        <!-- Location header -->
         <TextView
             style="@style/CreateEventHeading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/create_event_location_heading" />
 
-        <!-- Location header -->
-        <fragment
-            android:id="@+id/map"
-            class="com.google.android.gms.maps.SupportMapFragment"
-            android:layout_width="match_parent"
-            android:layout_height="320dp" />
+        <LinearLayout
+            android:id="@+id/map_container"
+            android:layout_height="320dp"
+            android:layout_width="match_parent">
+            <fragment
+                android:id="@+id/map"
+                class="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
 
         <!-- Map -->
 
@@ -108,6 +113,7 @@
 
         <!-- Event duration -->
         <TextView
+            android:id="@+id/event_duration"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -123,7 +129,7 @@
             android:text="@string/create_event_description_header" />
 
         <EditText
-            android:id="@+id/name"
+            android:id="@android:id/text1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
@@ -175,18 +181,16 @@
 
                 <!-- For adding a gallery -->
                 <LinearLayout
-                    android:background="@drawable/add_to_gallery_bg_released"
+                    android:id="@+id/add_to_gallery"
+                    android:clickable="true"
+                    android:onClick="dispatchGalleryIntent"
+                    android:background="@drawable/add_to_gallery_bg"
                     android:layout_width="320dp"
                     android:layout_height="320dp">
                 </LinearLayout>
 
             </LinearLayout>
         </ScrollView>
-
-        <CheckedTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Test" />
 
 
         <!-- Ensures the user is somewhat aware of what they entered -->
@@ -200,6 +204,7 @@
         <!-- Submit event -->
         <LinearLayout
             style="@style/RoundButton"
+            android:onClick="doInitialSubmit"
             android:layout_width="250dp">
 
             <TextView
