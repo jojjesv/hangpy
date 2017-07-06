@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="primary">#93DADA</color>
+    <color name="primary_dark">#64BABA</color>
+    <color name="primary_dark_a">#73C5C5</color> <!-- A little lighter -->
+    <color name="primary_darker">#3C9595</color>
+    <color name="primary_light">#C5F1F1</color>
+    <color name="primary_lighter">#F2FEFE</color>
+    <color name="map_marker">@color/primary</color>
+    <color name="white">#FAFAFA</color>
 </resources>

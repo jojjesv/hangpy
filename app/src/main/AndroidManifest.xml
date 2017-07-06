@@ -9,13 +9,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <uses-library android:name="com.google.android.maps" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.CreateEventActivity">
+        </activity>
+
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyACRz8QeHiBZYiE2VRcd0HX_TRcwQelCM0" />
     </application>
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-feature android:name="android.hardware.camera2" android:required="false" />
 </manifest>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    ADD TO GALLERY BG
+    In a released state.
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <stroke android:color="@color/primary_lighter" android:width="4dp" android:dashGap="18dp" android:dashWidth="18dp" />
+        </shape>
+    </item>
+    <item>
+        <bitmap android:tint="@color/primary_lighter" android:src="@mipmap/ic_launcher" android:gravity="center" />
+    </item>
+</layer-list>

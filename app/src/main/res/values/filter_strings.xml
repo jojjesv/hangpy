@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="filter_distance">Distance</string>
+    <string name="filter_location">Location</string>
+    <string name="filter_time">Starts</string>
+    <string name="filter_attendance_count">Attendees</string>
+</resources>

@@ -1,4 +1,32 @@
 <resources>
     <string name="app_name">Hangpy</string>
+    <string name="category_select">Choose Activity</string>
+    <string name="create_event">CREATE</string>
+    <string name="create_event_add_description">Add description</string>
+    <string name="create_event_category_header">What?</string>
+    <string name="create_event_description_header">Describe more</string>
+    <string name="create_event_header">Create an Event</string>
+    <string name="create_event_location_heading">Where?</string>
+    <string name="create_event_photos_heading">This needs a photo</string>
+    <string name="create_event_pre_heading">All done?</string>
+    <string name="create_event_time_heading">When?</string>
     <string name="event_name_hint">Enter an event name</string>
+    <string name="events_header">Events</string>
+    <string name="input_category_heading">Choose Activity</string>
+    <string name="suggestion_heading">Did you mean</string>
+    <string name="event_start" formatted="true">Starts %s</string>
+    <string name="event_end" formatted="true">Ends %s</string>
+    <string name="event_duration" formatted="true">Event will last %1$d %2$s</string>
+    <string name="event_duration_approx" formatted="true">Event will last around %1$d %2$s</string>
+    <string name="event_duration_minutes" formatted="true">Event will last %1$d %2$s %3$d %4$s</string> <!-- With minutes -->
+    <string name="event_duration_minutes_approx" formatted="true">Event will last around %1$d %2$s %3$d %4$s</string>
+    <string name="quantity_one_hour">an</string>
+    <plurals name="hours">
+        <item quantity="one">hour</item>
+        <item quantity="other">hours</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="one">min</item>
+        <item quantity="other">mins</item>
+    </plurals>
 </resources>
