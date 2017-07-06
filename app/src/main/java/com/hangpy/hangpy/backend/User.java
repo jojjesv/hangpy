@@ -11,6 +11,7 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
+import java.net.URLDecoder;
 import java.net.URLEncoder;
 
 /**
@@ -58,7 +59,7 @@ public class User {
                     connection.setDoOutput(postData != null);
                     connection.setUseCaches(false);
 
-                    if (postData != null) {
+                    if (postData != null && postData.length > 0) {
                         boolean isFileUpload = fileExtension != null;
                         String fileName = isFileUpload ? "0." + fileExtension : null;
 
@@ -128,6 +129,20 @@ public class User {
     public static String encode(String text) {
         try {
             return URLEncoder.encode(text, "UTF-8");
+        } catch (Exception ex) {
+            return text;
+        }
+    }
+
+    /**
+     * URL decodes some piece of text.
+     *
+     * @param text Text to encode.
+     * @return
+     */
+    public static String decode(String text) {
+        try {
+            return URLDecoder.decode(text, "UTF-8");
         } catch (Exception ex) {
             return text;
         }

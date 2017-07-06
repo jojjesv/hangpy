@@ -53,16 +53,21 @@
         <LinearLayout
             style="@style/RoundButton"
             android:layout_width="250dp"
-            android:onClick="showCategoryInput">
+            android:onClick="showCategoryInput"
+            android:layout_height="wrap_content">
 
             <ImageView
                 style="@style/RoundButtonIcon"
-                android:src="@mipmap/ic_launcher" />
+                android:src="@mipmap/ic_launcher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/current_category"
                 style="@style/RoundButtonText"
-                android:text="@string/category_select" />
+                android:text="@string/category_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
 
@@ -79,16 +84,21 @@
         <LinearLayout
             style="@style/RoundButton"
             android:onClick="showStartTimeDialog"
-            android:layout_width="250dp">
+            android:layout_width="250dp"
+            android:layout_height="wrap_content">
 
             <ImageView
                 style="@style/RoundButtonIcon"
-                android:src="@mipmap/ic_launcher" />
+                android:src="@mipmap/ic_launcher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/start_text"
                 style="@style/RoundButtonText"
-                android:text="Starts " />
+                android:text="Starts "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
 
@@ -98,16 +108,21 @@
             style="@style/RoundButton"
             android:onClick="showEndTimeDialog"
             android:layout_width="250dp"
-            android:layout_marginTop="12dp">
+            android:layout_marginTop="12dp"
+            android:layout_height="wrap_content">
 
             <ImageView
                 style="@style/RoundButtonIcon"
-                android:src="@mipmap/ic_launcher" />
+                android:src="@mipmap/ic_launcher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/end_text"
                 style="@style/RoundButtonText"
-                android:text="Ends " />
+                android:text="Ends "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
 
@@ -134,7 +149,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-
         <!--
             Optional description toggle.
         -->
@@ -158,6 +172,12 @@
 
         </LinearLayout>
 
+        <!-- Description editor -->
+        <EditText
+            android:id="@+id/description_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
 
         <!-- Image/Video input -->
         <TextView
@@ -177,18 +197,25 @@
 
             <LinearLayout
                 android:id="@+id/gallery"
+                android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="320dp">
 
                 <!-- For adding a gallery -->
-                <LinearLayout
+                <View
+                    android:background="@drawable/add_to_gallery_bg"
+                    android:layout_width="@dimen/gallery_width_create"
+                    android:layout_height="@dimen/gallery_height_create">
+                </View>
+                <!-- For adding a gallery -->
+                <View
                     android:id="@+id/add_to_gallery"
                     android:clickable="true"
                     android:onClick="dispatchGalleryIntent"
                     android:background="@drawable/add_to_gallery_bg"
-                    android:layout_width="320dp"
-                    android:layout_height="320dp">
-                </LinearLayout>
+                    android:layout_width="@dimen/gallery_width_create"
+                    android:layout_height="@dimen/gallery_height_create">
+                </View>
 
             </LinearLayout>
         </ScrollView>
@@ -210,7 +237,9 @@
 
             <TextView
                 style="@style/RoundButtonText"
-                android:text="@string/create_event" />
+                android:text="@string/create_event"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
 

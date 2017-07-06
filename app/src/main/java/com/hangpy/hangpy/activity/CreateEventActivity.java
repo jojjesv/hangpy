@@ -319,8 +319,15 @@ public class CreateEventActivity extends FragmentActivity implements OnMapReadyC
         ImageView thumbnailView = new ImageView(this);
         thumbnailView.setImageBitmap(image);
 
+        Resources res = getResources();
+        int w = res.getDimensionPixelSize(R.dimen.gallery_width_create);
+        int h = res.getDimensionPixelSize(R.dimen.gallery_height_create);
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(w, h);
+
         LinearLayout galleryView = (LinearLayout) findViewById(R.id.gallery);
-        galleryView.addView(thumbnailView, 0);
+        galleryView.addView(thumbnailView, 0, params);
+
+        galleryView.requestLayout();
     }
 
     @Override

@@ -26,7 +26,7 @@
         android:layout_below="@id/header"/>
 
     <ListView
-        android:id="@+id/category_suggestions"
+        android:id="@+id/suggestions"
         android:layout_width="match_parent"
         android:layout_above="@android:id/inputArea"
         android:layout_below="@id/suggestion_header"

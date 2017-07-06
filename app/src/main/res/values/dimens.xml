@@ -7,4 +7,6 @@
     <dimen name="events_header_padding_x">6dp</dimen>
     <dimen name="events_header_padding_y">4dp</dimen>
     <dimen name="header_size">18sp</dimen>
+    <dimen name="gallery_width_create">320dp</dimen>
+    <dimen name="gallery_height_create">320dp</dimen>
 </resources>
